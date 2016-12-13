@@ -19,7 +19,7 @@ const todo = (state, action) => {
         case 'TOGGLE_TODO':
             if(todo.id !== action.id) return todo;
             return {
-                ...todo,
+ 1               ...todo,
                 completed: !todo.completed
             };
         default:
@@ -49,11 +49,18 @@ const visibiltyFilter = (state = 'SHOW_ALL' , action) => {
     }
 }
 
-//Combine Reducer, combines the Todo and Visibility reducer into one reducer
-
-const combineReducer = (state = {}, action) => {
-    
+const combineReducer = (reducer) => {
+    return (state = {}, action) => {
+        return Object.keys(reducer)
+                
 }
+
+//Calls the combine reducer function to add all the reducers into one function
+const todoApp = combineReducer({
+    todos,
+    visibiltyFilter
+});
+
 
 
 
@@ -83,7 +90,7 @@ const createStore = (reducer) => {
 }
 
 //Create the inital store
-const store = createStore(counter);
+const store = createStore(todoApp);
 
 //Creates a render method that is called when the app is started
 const render = () => {
