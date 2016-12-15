@@ -2,7 +2,7 @@
   "name": "ReduxStore",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "indexRx.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,9 +18,14 @@
   },
   "homepage": "https://github.com/sahilnayak/ReduxStore#readme",
   "dependencies": {
+    "colour": "^0.7.1",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
     "react": "^15.4.1",
     "react-redux": "^4.4.6",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "rxjs": "^5.0.1"
   },
   "devDependencies": {
     "babelify": "^7.3.0"
